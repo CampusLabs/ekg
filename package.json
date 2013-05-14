@@ -12,7 +12,8 @@
     "socket.io": "x",
     "underscore": "x",
     "underscore.string": "x",
-    "underscore-express": "x"
+    "underscore-express": "x",
+    "underscore-inherit": "x"
   },
   "devDependencies": {
     "chai": "x",
