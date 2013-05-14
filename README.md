@@ -12,6 +12,7 @@ npm install
 npm install -g bower
 bower install
 make
+# `make prod` for production env
 ```
 
 The server will run on `localhost:8080` by default.
