@@ -1,7 +1,6 @@
 (function () {
   'use strict';
 
-  var $ = window.jQuery;
   var _ = window._;
   var app = window.app;
   var Backbone = window.Backbone;
@@ -15,16 +14,6 @@
     initialize: function () {
       Backbone.View.prototype.initialize.apply(this, arguments);
       this.views = {};
-      this.on('page:in', this.pageIn);
-      this.on('page:out', this.pageOut);
-    },
-
-    inputData: function () {
-      return _.reduce(this.$('input'), function (data, el) {
-        var $el = $(el);
-        data[$el.attr('id').replace(/^js-|-field$/g, '')] = $el.val();
-        return data;
-      }, {});
     },
 
     render: function () {
@@ -49,19 +38,7 @@
       Backbone.View.prototype.remove.apply(this, arguments);
       _.invoke(this.views, 'remove');
       return this;
-    },
-
-    pageIn: function () {
-      _.invoke(this.views, 'trigger', 'page:in');
-      if (this.autofocus) {
-        this.$('input').each(function () {
-          var $self = $(this);
-          if (!$self.val()) return $self.focus() && false;
-        });
-      }
-    },
-
-    pageOut: function () { _.invoke(this.views, 'trigger', 'page:out'); }
+    }
   }, {
     cached: function (options) { return this._cached || this.fresh(options); },
 
