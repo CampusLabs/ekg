@@ -26,7 +26,7 @@
 
       // Otherwise retreive the CSRF token and try again
       $.ajax({
-        url: app.config.serverUrl + '/csrf',
+        url: app.config.server.url + '/csrf',
         complete: function (xhr) {
           if (xhr.status === 200) {
             app.csrf = xhr.responseText;

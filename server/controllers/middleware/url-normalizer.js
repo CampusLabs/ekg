@@ -8,7 +8,7 @@ module.exports = function (req, res, next) {
   var path = req.path.replace(/\/+/g, '/').replace(/\/$/, '') || '/';
   var query = req.url.replace(/^[^?]*/, '');
   var current = proto + '://' + req.headers.host + req.url;
-  var correct = (config.serverUrl + path).toLowerCase() + query;
+  var correct = (config.server.url + path).toLowerCase() + query;
   if (current === correct) return next();
   res.redirect(correct, 301);
 };

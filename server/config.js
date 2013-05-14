@@ -17,6 +17,9 @@ var config = module.exports = {
   server: {
     url: 'http://localhost:8080',
     port: 8080
+  },
+  socketIo: {
+    'log level': 0
   }
 };
 

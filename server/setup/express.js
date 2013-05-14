@@ -8,9 +8,12 @@ var io = require('socket.io');
 var app = express();
 var server = http.createServer(app);
 app.io = io.listen(server);
+app.io.configure(config.env, function () {
+  _.each(config.socketIo, function (val, key) { app.io.set(key, val); });
+});
 
 // Bind to port.
-app.listen(config.serverPort);
+server.listen(config.server.port);
 
 // All lower case and no trailing slashes allowed.
 app.enable('case sensitive routing');
