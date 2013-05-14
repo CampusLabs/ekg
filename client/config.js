@@ -10,7 +10,18 @@
     env: env,
     server: {
       url: 'http://localhost:8080'
-    }
+    },
+    grid: {
+      width: 10,
+      height: 10
+    },
+    widgets: [{
+      class: 'ClockWidget',
+      x: 0,
+      y: 0,
+      width: 2,
+      height: 2
+    }]
   };
 
   _.extend(app.config,

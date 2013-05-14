@@ -8,6 +8,7 @@
     "colors": "x",
     "express": "x",
     "jobby": "x",
+    "moment": "x",
     "redis": "x",
     "socket.io": "x",
     "underscore": "x",

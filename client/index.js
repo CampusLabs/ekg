@@ -5,6 +5,7 @@
 //= require underscore-inherit/underscore-inherit
 //= require backbone/backbone
 //= require dpr/dpr.js
+//= require moment/moment
 //= requireSelf
 //= require ./config
 //= requireTree setup
@@ -16,13 +17,13 @@
   'use strict';
 
   var $ = window.jQuery;
-  var Backbone = window.Backbone;
   var dpr = window.dpr;
 
   // Define global namespace
   var app = window.app = {
     ready: function () {
       $('html').addClass('dpr-' + dpr());
+      new app.MainView({widgets: app.config.widgets});
     }
   };
 
