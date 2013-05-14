@@ -1,0 +1,19 @@
+{
+  "growl": true,
+  "verbose": true,
+  "paths": [
+    "views/jst",
+    "node_modules",
+    "components",
+    "client",
+    "models"
+  ],
+  "options": {
+    "processors.tmpl.options.variable": "o",
+    "processors.styl.options.nib": true
+  },
+  "targets": {
+    "client/index.js": "public",
+    "client/css/index.styl": "public"
+  }
+}

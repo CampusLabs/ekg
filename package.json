@@ -1,0 +1,31 @@
+{
+  "name": "ekg",
+  "private": true,
+  "main": "server",
+  "dependencies": {
+    "async": "x",
+    "backbone": "git://github.com/documentcloud/backbone",
+    "colors": "x",
+    "express": "x",
+    "jobby": "x",
+    "redis": "x",
+    "socket.io": "x",
+    "underscore": "x",
+    "underscore.string": "x",
+    "underscore-express": "x"
+  },
+  "devDependencies": {
+    "chai": "x",
+    "cogs": "x",
+    "mocha": "x",
+    "nib": "x",
+    "sinon": "x",
+    "sinon-chai": "x",
+    "stylus": "x",
+    "watchy": "x"
+  },
+  "engines": {
+    "node": "x",
+    "npm": "x"
+  }
+}
