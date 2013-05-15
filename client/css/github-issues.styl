@@ -1,0 +1,23 @@
+@import 'config'
+
+@keyframes alert
+  from
+    background #f00
+  to
+    background #333
+
+.github-issues-widget
+  height 100%
+  overflow hidden
+  h1
+    padding 1%
+    text-align center
+    color #fff
+    background #222
+  .github-issue-list-item
+    background #666
+    &.js-not-assigned
+      animation-name alert
+      animation-duration 1s
+      animation-iteration-count infinite
+      animation-direction alternate

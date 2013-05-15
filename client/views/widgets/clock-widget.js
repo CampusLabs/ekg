@@ -9,9 +9,9 @@
   var moment = window.moment;
   var View = app.View;
 
-  app.ClockWidget = View.extend({
+  app.ClockWidgetView = View.extend({
     className: 'clock-widget',
-    template: window.jst['widgets/clock'],
+    template: window.jst['clock-widget'],
 
     initialize: function () {
       View.prototype.initialize.apply(this, arguments);

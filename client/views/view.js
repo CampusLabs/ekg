@@ -6,11 +6,6 @@
   var Backbone = window.Backbone;
 
   app.View = Backbone.View.extend({
-    constructor: function (options) {
-      _.extend(this, options);
-      Backbone.View.apply(this, arguments);
-    },
-
     initialize: function () {
       Backbone.View.prototype.initialize.apply(this, arguments);
       this.views = {};

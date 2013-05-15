@@ -5,3 +5,4 @@
 /public/index.css
 *.log
 .*.sw*
+/config

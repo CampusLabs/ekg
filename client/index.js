@@ -17,13 +17,14 @@
   'use strict';
 
   var $ = window.jQuery;
-  var dpr = window.dpr;
 
   // Define global namespace
   var app = window.app = {
+    socket: window.io.connect(),
+
     ready: function () {
-      $('html').addClass('dpr-' + dpr());
-      new app.MainView({widgets: app.config.widgets});
+      $('html').addClass('dpr-' + window.dpr());
+      app.mainView = new app.MainView();
     }
   };
 

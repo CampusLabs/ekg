@@ -7,7 +7,8 @@
   var app = window.app;
 
   app.ListView = app.View.extend({
-    initialize: function () {
+    initialize: function (options) {
+      this.modelView = options.modelView;
       app.View.prototype.initialize.apply(this, arguments);
       this.listenTo(this.collection, {
         add: this.addModel,
