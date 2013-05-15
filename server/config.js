@@ -20,7 +20,8 @@ var config = module.exports = {
   },
   socketIo: {
     'log level': 0
-  }
+  },
+  dir: process.env.EKG_CONFIG || __dirname + '/../config'
 };
 
 _.extend(config,

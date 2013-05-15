@@ -4,6 +4,7 @@ WATCHY=$(BIN)watchy
 COGS=$(BIN)cogs
 TEST=$(MOCHA) --growl --colors --recursive
 SERVER=node server
+EKG_CONFIG?=config
 
 dev:
 	$(MAKE) -j redis server-w cogs-w test-w
@@ -15,7 +16,10 @@ server:
 	$(SERVER)
 
 server-w:
-	$(WATCHY) -w actions,models,server,lib -vgs SIGQUIT -- $(SERVER)
+	$(WATCHY) -w actions,models,server,lib,$(EKG_CONFIG) -vgs SIGQUIT -- $(SERVER)
+
+server-prod:
+	NODE_ENV=production $(WATCHY) -w $(EKG_CONFIG) -s SIGQUIT -- $(SERVER)
 
 cogs:
 	$(COGS) $(ARGS)
@@ -30,6 +34,6 @@ test-w:
 	NODE_ENV=test $(WATCHY) -w actions,models,server,test -s SIGQUIT -- $(TEST) > /dev/null
 
 prod: cogs
-	NODE_ENV=production $(SERVER)
+	make -j redis server-prod
 
 .PHONY: server test
