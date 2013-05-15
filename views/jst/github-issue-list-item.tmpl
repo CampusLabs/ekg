@@ -2,6 +2,8 @@
 var assignee = o.model.get('assignee');
 var src = assignee ? assignee.avatar_url : 'https://i2.wp.com/a248.e.akamai.net/assets.github.com/images/gravatars/gravatar-user-420.png?ssl=1';
 %>
-<div class='content'>
-  <img src='<%= src %>'><%- o.model.get('title') %>
+<img src='<%= src %>'
+><div class='description'>
+  <h2><%- o.model.get('title') %></h2>
+  <%- moment(o.model.get('created_at')).format('MMMM d, YYYY') %>
 </div>

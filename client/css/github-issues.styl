@@ -2,7 +2,7 @@
 
 @keyframes alert
   from
-    background #f00
+    background #900
   to
     background #333
 
@@ -14,12 +14,23 @@
     text-align center
     color #fff
     background #222
+  h2
+    color #fff
   .github-issue-list-item
-    background #666
-    &.js-not-assigned
+    color #ccc
+    background #333
+    font-size 80%
+    &.critical.js-not-assigned
       animation-name alert
       animation-duration 1s
       animation-iteration-count infinite
       animation-direction alternate
     img
-      width 20%
+      display inline-block
+      width 25%
+      vertical-align middle
+    .description
+      display inline-block
+      padding 2%
+      width 71%
+      vertical-align middle
