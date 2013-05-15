@@ -5,3 +5,7 @@ require('./setup')([
   'redis',
   'express'
 ]);
+
+module.exports = {
+  adapters: require('../lib/adapters')
+};

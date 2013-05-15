@@ -15,7 +15,7 @@ server:
 	$(SERVER)
 
 server-w:
-	$(WATCHY) -w actions,models,server -vgs SIGQUIT -- $(SERVER)
+	$(WATCHY) -w actions,models,server,lib -vgs SIGQUIT -- $(SERVER)
 
 cogs:
 	$(COGS) $(ARGS)
