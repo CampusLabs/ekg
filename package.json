@@ -15,7 +15,8 @@
     "underscore": "x",
     "underscore.string": "x",
     "underscore-express": "x",
-    "underscore-inherit": "x"
+    "underscore-inherit": "x",
+    "xml2js": "x"
   },
   "devDependencies": {
     "chai": "x",
